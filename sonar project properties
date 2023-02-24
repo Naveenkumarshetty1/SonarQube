@@ -1,0 +1,5 @@
+sonar.projectKey=syngenta-webportal
+sonar.projectName=syngenta-webportal
+sonar.projectVersion=latest
+sonar.sources=
+sonar.host.url=http://172.19.4.42:9000/
