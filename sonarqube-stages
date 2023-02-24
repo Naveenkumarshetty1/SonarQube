@@ -1,0 +1,11 @@
+stages:
+ - scan
+sonarscan:
+ stage: scan
+ image: registry.xcubelabs.com/docker/docker-scanner-base
+ only:
+   - code-analyser
+ tags:
+   - nodejsv12
+ script:
+   - /opt/sonar-scanner/bin/sonar-scanner -X -Dsonar.projectKey=syngenta-webportal -Dsonar.sources=src -Dsonar=src  -Dsonar.host.url=http://172.18.5.67:9000  -Dsonar=login=8a4a776250ed68da1a84f95a354ea970d18e7f88
